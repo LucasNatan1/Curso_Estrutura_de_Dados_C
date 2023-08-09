@@ -1,0 +1,76 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+main(){
+	int i, maior, menor;
+	const int TAM_MAX_VETOR = 5;
+	int idade[TAM_MAX_VETOR];
+	for (i=0; i<TAM_MAX_VETOR; i++){
+	 cout<<"Digite o valor da "<<i+1<<"a idade: ";	
+	 cin>>idade[i];
+	}
+	cout << "Idades digitadas: \n";
+	for (i=0; i<TAM_MAX_VETOR; i++){
+	 cout<< idade[i]<< " - "; 	
+	}	
+	maior = idade[0];
+	menor = idade[0];
+	for (i=0; i<TAM_MAX_VETOR; i++){
+	  if (idade[i]>maior){
+	  	maior = idade[i];
+	  } 
+	  if (idade[i]<menor){
+	  	menor = idade[i]; 
+	  }	
+	}
+	cout<< "\nMaior idade digitada: " << maior;
+	cout<< "\nMenor idade digitada: " << menor;
+}
+
+#include <iostream>
+#include <conio.h>
+using namespace std;
+main(){
+    char nome[21]; 	
+	cout << "Digite seu nome: ";
+	gets(nome);
+	cout << "O nome digitado foi: ";
+	puts(nome);
+	cout << "Primeira letra: " <<nome[0];
+	}
+
+#include <iostream>
+#include <conio.h>
+using namespace std;
+main(){
+   int Matriz[4][4], i, j;
+     for (i=0; i<4; i++){
+     	for (j=0; j<4; j++){
+     		cout << "\nDigite o elemento (" << i << " - " << j 
+			 << ") da matriz: ";
+			cin >> Matriz[i][j];
+		 }
+	}
+	for (i=0; i<4; i++){
+		cout << "\n";
+	 for (j=0; j<4; j++){
+			cout << Matriz[i][j] << "\t";
+		 }
+	 }
+	cout << "\nElementos da Diagonal Principal: ";
+	for (i=0; i<4; i++){
+	 for (j=0; j<4; j++){
+	 	if (i==j){
+			cout << Matriz[i][j] << "\t";
+		}
+	}
+	}	
+	cout << "\nElementos da Diagonal Secundaria: ";
+	for (i=0; i<4; i++){
+	 for (j=0; j<4; j++){
+	 	if (i+j==3){
+			cout << Matriz[i][j] << "\t";
+		}
+	}
+	}	
+}
