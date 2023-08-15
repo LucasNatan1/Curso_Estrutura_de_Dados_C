@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+struct aluno{
+	int matricula;
+	float nota;
+	char turma;
+};
+main(){
+	const int TAM_MAX_VETOR = 5; int i;
+	struct aluno alunos[TAM_MAX_VETOR];
+	for (i=0; i < TAM_MAX_VETOR; i++){
+	  cout << "Digite matricula do " << i+1 << "o aluno: ";
+	  cin >> alunos[i].matricula;
+	  cout << "Digite nota do " << i+1 << "o aluno: ";
+	  cin >> alunos[i].nota;
+	  cout << "Digite a Turma do " << i+1 << "o aluno: ";
+	  cin >> alunos[i].turma;
+	}
+	cout << "\nAlunos cadastrados: \n";
+	for (i=0; i < TAM_MAX_VETOR; i++){
+	  cout << "\nMatricula: " << alunos[i].matricula;
+	  cout << "\nNota: " << alunos[i].nota;
+	  cout << "\nTurma: " << alunos[i].turma << "\n";
+	}	
+	cout << "Lista de Alunos com nota maior que 7 da Turma A";
+	for (i=0; i < TAM_MAX_VETOR; i++){
+	 if ( (alunos[i].nota >= 7) && (alunos[i].turma == 'A')){
+	 	cout << "\nMatricula: " << alunos[i].matricula;
+	    cout << "\nNota: " << alunos[i].nota;
+	 }	
+	cout << "\nMedia das notas da turma A";
+	cout << "\nMedia das notas da turma B";
+	}
+}
